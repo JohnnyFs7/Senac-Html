@@ -1,9 +1,16 @@
 * {
   font-family: Arial, sans-serif;
+  box-sizing: border-box;
 }
 
 body {
   margin: 0;
+  background-color: #f5f8fc;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 5px auto;
 }
 
 header {
@@ -13,22 +20,41 @@ header {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 10px 0 0 0;
+  padding: 0 0 0 0;
+  max-width: calc(100% - 260px);
+  margin: 10px auto 0 auto;
 }
 
-header h1 {
-  margin: 5px 0;
-  font-size: 1.6rem;
+main {
+  background-color:#ffffff;
+  max-width: calc(100% - 260px);
+  padding: 15px;
+  margin: 0 625px 0 130px;
+}
+
+article h2 {
+  color: #183153;
+}
+
+header h1,
+header p {
+  padding: 0 0 0px 0;
 }
 
 header p {
-  margin: 0 0 8px 0;
+  position: relative;
+  margin: 6px 0 -10px 0;
+  top: -30px;
+  font-size: 1rem;
   color: #d6e9ff;
 }
 
-nav {
-  width: 94%;
+h4 {
+  color: #183153;
+}
 
+nav {
+  width: 100%;
 }
 
 nav ul {
@@ -37,21 +63,26 @@ nav ul {
   justify-content: center;
   gap: 20px;
   list-style: none;
-  padding: 10px;
-  margin: 20px;
+  padding: 14px 0;
+  margin: 0px;
 }
 
-nav a {
-  color: #1246AA;
-  text-decoration: none;
+nav a,
+nav a:visited {
+  color: #1246aa;
+  text-decoration: underline;
+}
+
+nav a:hover {
+  color: #dd5500;
 }
 
 nav li::after {
-    content: "|";
-    margin-left: 20px;
-    color: #183153;
+  content: '|';
+  margin-left: 20px;
+  color: #183153;
 }
 
 nav li:last-child::after {
-    content: none;
+  content: none;
 }
